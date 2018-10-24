@@ -37,6 +37,17 @@ public class ControlJuego {
 	public void inicializarPartida(){
 
 		//TODO: Repartir minas e inicializar puntaci�n. Si hubiese un tablero anterior, lo pongo todo a cero para inicializarlo.
+		int colocadas=0;
+		puntuacion=0;
+		do {
+			int x = (int) (Math.random()*9);
+			int y = (int) (Math.random()*9);
+		
+			if (tablero[x][y] != MINA){
+				tablero[x][y] = MINA;
+				colocadas++;
+			}
+		} while (colocadas==20);
 		
 		
 		
@@ -59,7 +70,10 @@ public class ControlJuego {
 	 * @return : El número de minas que hay alrededor de la casilla [i][j]
 	 **/
 	private int calculoMinasAdjuntas(int i, int j){
-
+		int cantidadMinas=0;
+		
+		
+		return cantidadMinas;
 	}
 	
 	/**
@@ -70,7 +84,13 @@ public class ControlJuego {
 	 * @return : Verdadero si no ha explotado una mina. Falso en caso contrario.
 	 */
 	public boolean abrirCasilla(int i, int j){
-
+		boolean mina;
+		if(tablero[i][j]==MINA) {
+			return mina=false;
+		}else {
+			return mina = true;
+		}
+		
 	}
 	
 	
@@ -105,6 +125,8 @@ public class ControlJuego {
 	 * @return Un entero que representa el número de minas alrededor de la celda
 	 */
 	public int getMinasAlrededor(int i, int j) {
+		int numero = tablero[i][j];
+		return numero;
 	}
 
 	/**
@@ -112,6 +134,7 @@ public class ControlJuego {
 	 * @return Un entero con la puntuación actual
 	 */
 	public int getPuntuacion() {
+		return puntuacion;
 	}
 	
 }
