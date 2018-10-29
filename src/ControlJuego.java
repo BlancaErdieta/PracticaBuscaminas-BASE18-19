@@ -73,6 +73,138 @@ public class ControlJuego {
 		int cantidadMinas=0;
 		
 		
+		if (j==0) {
+			if (i==0) {
+				if (tablero[i][j+1]==MINA) {
+					cantidadMinas++;
+				}
+				if (tablero[i+1][j+1]==MINA) {
+					cantidadMinas++;
+				}
+				
+				if (tablero[i+1][j]==MINA) {
+					cantidadMinas++;
+				}
+			}
+			
+			if(i==LADO_TABLERO-1) {
+				if(tablero[i-1][j]==MINA) {
+					
+					cantidadMinas++;
+				}
+				if(tablero[i-1][j+1]==MINA) {
+					cantidadMinas++;
+				}
+				if (tablero[i][j+1]==MINA) {
+					cantidadMinas++;
+				}
+				
+				
+			}
+			
+			if (tablero[i][j+1]==MINA) {
+				cantidadMinas++;
+			}
+			if (tablero[i+1][j+1]==MINA) {
+				cantidadMinas++;
+			}
+			
+			if (tablero[i+1][j]==MINA) {
+				cantidadMinas++;
+			}
+			if(tablero[i-1][j]==MINA) {
+				
+				cantidadMinas++;
+			}
+			if(tablero[i-1][j+1]==MINA) {
+				cantidadMinas++;
+			}
+			
+		}else {
+			if (j==LADO_TABLERO-1) {
+				if (i==0) {
+					
+					if (tablero[i][j-1]==MINA) {
+						cantidadMinas++;
+					}
+					if(tablero[i+1][j-1]==MINA) {
+						cantidadMinas++;
+					}
+					if (tablero[i+1][j]==MINA) {
+						cantidadMinas++;
+					}
+					
+					
+				}
+				if (i==LADO_TABLERO-1) {
+					
+					if (tablero[i-1][j]==MINA) {
+						cantidadMinas++;
+					}
+					if (tablero[i-1][j-1]==MINA) {
+						cantidadMinas++;
+					}
+					if (tablero[i][j-1]==MINA) {
+						cantidadMinas++;
+					}
+			
+				}
+				
+				if (tablero[i-1][j]==MINA) {
+					cantidadMinas++;
+				}
+				if (tablero[i-1][j-1]==MINA) {
+					cantidadMinas++;
+				}
+				
+				if (tablero[i+1][j]==MINA) {
+					cantidadMinas++;
+				}
+				if(tablero[i][j+-1]==MINA) {
+					
+					cantidadMinas++;
+				}
+				if(tablero[i+1][j-1]==MINA) {
+					cantidadMinas++;
+				}
+
+				if (tablero[i][j+1]==MINA) {
+					cantidadMinas++;
+				}
+				if (tablero[i+1][j+1]==MINA) {
+					cantidadMinas++;
+				}
+				
+				if(tablero[i-1][j+1]==MINA) {
+					cantidadMinas++;
+				}
+				
+			
+			}
+			
+			if (tablero[i-1][j]==MINA) {
+				cantidadMinas++;
+			}
+			if (tablero[i-1][j-1]==MINA) {
+				cantidadMinas++;
+			}
+			
+			if (tablero[i+1][j]==MINA) {
+				cantidadMinas++;
+			}
+			if(tablero[i][j+-1]==MINA) {
+				
+				cantidadMinas++;
+			}
+			if(tablero[i+1][j-1]==MINA) {
+				cantidadMinas++;
+			}
+			
+			
+			
+		}
+		
+		
 		return cantidadMinas;
 	}
 	
@@ -100,6 +232,13 @@ public class ControlJuego {
 	 * @return Devuelve verdadero si se han abierto todas las celdas que no son minas.
 	 **/
 	public boolean esFinJuego(){
+		boolean terminado;
+			if (puntuacion==(80)) {
+				terminado=true;
+			}else {
+				terminado=false;
+			}
+		return terminado;
 	}
 	
 	
