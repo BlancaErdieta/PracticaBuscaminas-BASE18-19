@@ -8,6 +8,9 @@ import java.util.Random;
  * Si no hay una mina, se guarda cuántas minas hay alrededor.
  * Almacena la puntuación de la partida
  * @author blancaErdieta
+ * @version 1.0
+ * @since 2018
+ * @see VentanaPrincipal.class
  *
  */
 public class ControlJuego {

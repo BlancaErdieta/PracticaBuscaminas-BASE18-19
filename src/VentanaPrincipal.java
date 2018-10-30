@@ -12,7 +12,17 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-
+/**
+ * Clase que gestiona el juego.
+ * Guarda todos los componentes.
+ * 
+ * @author BlancaErdieta
+ * {@link #inicializar()}
+ * {@code ventana.setVisible(true);
+		inicializarComponentes();	
+		inicializarListeners();	}
+ *
+ */
 
 public class VentanaPrincipal {
 
